@@ -1,0 +1,222 @@
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #202020;
+  margin: 15px auto;
+  width: 50%;
+  height: 80%;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  /* cursor: pointer; */
+  transition: 0.5s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 0px;
+  height: 60px;
+}
+
+.card:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(255,0,255,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+.spin{
+  font-size: 40px;
+}
+
+.spin:hover{
+  transition: 1s;
+  transform: rotateY(720deg);
+}
+
+.ca_stap {
+  background-color: #202020;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    height: 480px;
+    float: left;
+    padding: 50px 20px 20px 20px;
+    text-align: center;
+    margin: 0px auto ;
+    margin-left: 5px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-top: 4px solid rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    position: relative;
+}
+
+.ca_stap:hover {
+    background: rgba(255,0,255,0.22);
+    box-shadow: 0px 2px 12px rgb(35 111 182 / 80%);
+    border-top: 4px solid #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+     transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(255,0,255,0.22);
+    color: white;
+}
+
+.ca_stap>.ca_step_icon_border {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    border: 1px solid #373f4a;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow: hidden;
+}
+
+.ca_stap:hover>.ca_step_icon_border {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.ca_stap>.ca_step_icon_border>.ca_step_icon {
+    width: 100%;
+    height: 100%;
+    background: #373f4a;
+    text-align: center;
+    padding-top: 10px;
+}
+.ca_stap  h4{
+    margin-top: 40px;
+}
+
+.ca_stap:hover>.ca_step_icon_border>.ca_step_icon {
+    background: linear-gradient(left top, #66ccff, #3399ff);
+    background: -webkit-linear-gradient(left top, #66ccff, #3399ff);
+    background: -ms-linear-gradient(left top, #66ccff, #3399ff);
+    background: -o-linear-gradient(left top, #66ccff, #3399ff);
+    background: -moz-linear-gradient(left top, #66ccff, #3399ff);
+}
+
+.ca_stap:hover>.ca_step_icon_border {
+    border-color:#fff;
+}
+
+.ca_stap>i {
+    position: absolute;
+    line-height: 80px;
+    left: 45%;
+    top: 74px;
+    text-align: center;
+    display: inline-table;
+    margin-left: -15px;
+    margin-top: -23px;
+    z-index: 99;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-size: 64px;
+}
+
+.ca_stap>a {
+    color: inherit;
+}
+
+.ca_stap>a:hover {
+    color: inherit;
+}
+
+.ca_stap>a>h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/* @media all and (max-width: 500px) {
+  .card {
+    // On small screens, we are no longer using row direction but column
+    flex-direction: column;
+    height: 400px;
+    text-align: center;
+
+  }
+  .card .col-icon{
+    display: none;
+  }
+  .card h4,h6{
+    // On small screens, we are no longer using row direction but column
+   font-size: 20px;
+   padding: 10px;
+   line-height: 25px;
+   text-align: center;
+
+  }
+} */
+
+@media all and (max-width: 500px) {
+  .ca_stap{
+    /*margin-right: 30px;*/
+    margin-bottom: 20px;
+    margin-left: 0px;
+    font-size: 30px;
+    height: 400px;
+  }
+  .ca_stap h4,p{
+
+    font-size: 20px;
+  }
+}
